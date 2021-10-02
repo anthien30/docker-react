@@ -6,4 +6,4 @@ before_install:
   - docker build -t anthien30/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run anthien30/docker-react npm run test -- --coverage
+  - docker run -e CI=true anthien30/docker-react npm run test -- --coverage
